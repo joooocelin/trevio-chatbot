@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#174C3C">
+  <meta name="trevio-backend-url" content="">
+  <title>Trevio | Teman Perjalanan Nusantara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="tavi-mark" viewBox="0 0 220 180">
+      <path d="M52 119 22 133l41 5 13-9Z" fill="#174C3C"/>
+      <path d="M56 108c0-28 22-50 52-50 29 0 52 21 55 48l-15 33H84c-17-5-28-16-28-31Z" fill="#F8F3E8"/>
+      <path d="M67 103c16-15 39-20 62-10 9 4 17 12 22 22-17 16-44 21-66 12-9-4-15-12-18-24Z" fill="#174C3C"/>
+      <path d="M77 108c13-8 27-9 39-4-9 11-21 17-34 15-3-3-5-7-5-11Z" fill="#F8F3E8"/>
+      <path d="M84 135v13m34-15v15m-12-15v15" fill="none" stroke="#C66B4E" stroke-linecap="round" stroke-width="6"/>
+      <path d="M77 151h17m4 0h18m2 0h16" fill="none" stroke="#174C3C" stroke-linecap="round" stroke-width="5"/>
+      <circle cx="150" cy="59" r="31" fill="#F8F3E8"/>
+      <path d="M125 48c-4-17 2-31 14-32 9-1 14 7 16 19 5-9 13-13 21-10 10 4 11 17 4 29l-9 8h-38Z" fill="#D5AC62"/>
+      <path d="M160 61c18-9 40-7 52 1-7 13-23 21-44 18l-17-8Z" fill="#C66B4E"/>
+      <path d="M157 69c13 7 29 8 43 2-7 12-20 17-35 12l-10-7Z" fill="#D5AC62"/>
+      <circle cx="158" cy="55" r="4.5" fill="#174C3C"/>
+      <circle cx="159.5" cy="53.5" r="1.5" fill="#F8F3E8"/>
+      <path d="M145 83c9 5 18 5 25 1" fill="none" stroke="#C66B4E" stroke-linecap="round" stroke-width="3"/>
+      <path d="M116 81c8 7 20 10 31 9l-5 14c-15 1-27-4-36-14Z" fill="#C66B4E"/>
+      <path d="M33 145c23-3 42-3 60 0m55-1c16-2 29-1 43 2" fill="none" stroke="#D5AC62" stroke-linecap="round" stroke-width="3"/>
+    </symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Trevio">
+      <a class="brand" href="/" aria-label="Trevio, beranda chat">
+        <span class="brand-mark"><svg viewBox="0 0 220 180"><use href="#tavi-mark"></use></svg></span>
+        <span class="brand-name">trevio<span>.</span></span>
+      </a>
+
+      <div class="sidebar-rule" aria-hidden="true"><span></span></div>
+
+      <div class="sidebar-copy">
+        <p class="eyebrow">JELAJAH NUSANTARA</p>
+        <p>Temukan cerita, rasa, dan tempat yang membuat perjalanan terasa lebih dekat.</p>
+      </div>
+
+      <div class="sidebar-bottom">
+        <span class="sidebar-stamp" aria-hidden="true">꩜</span>
+        <p>Diracik dengan rasa ingin tahu.</p>
+      </div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="topbar">
+        <div class="topbar-title">
+          <span class="mobile-brand">trevio<span>.</span></span>
+          <span class="topbar-label">TEMAN PERJALANANMU</span>
+          <span class="connection-status"><span class="status-dot"></span> Siap menjelajah</span>
+        </div>
+        <button class="new-chat-button" id="new-chat" type="button" title="Mulai obrolan baru">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <span>Obrolan baru</span>
+        </button>
+      </header>
+
+      <section class="conversation" id="conversation" aria-label="Percakapan dengan Trevio" role="log" aria-live="polite" aria-relevant="additions text">
+        <div class="welcome-message" id="welcome-message">
+          <div class="welcome-art" aria-hidden="true">
+            <span class="art-spark spark-one">✳</span>
+            <span class="art-spark spark-two">✦</span>
+            <svg class="tavi-illustration" viewBox="0 0 220 180"><use href="#tavi-mark"></use></svg>
+            <span class="art-caption">Tavi si Enggang</span>
+          </div>
+          <div class="welcome-copy">
+            <p class="eyebrow welcome-eyebrow">SUGENG RAWUH · SELAMAT DATANG</p>
+            <h1>Halo, Petualang! Mau ke mana hari ini?</h1>
+            <p class="welcome-description">Aku Tavi. Ceritakan suasana liburan yang kamu bayangkan, nanti kita cari tempat yang pas bersama.</p>
+          </div>
+        </div>
+
+        <div class="suggestion-grid" id="suggestion-grid" aria-label="Ide perjalanan">
+          <button class="suggestion-card" type="button" data-prompt="Rekomendasikan pantai dan pulau indah di Indonesia untuk liburan santai.">
+            <span class="suggestion-icon icon-wave" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9c2.3 0 2.3-2 4.7-2s2.3 2 4.6 2 2.4-2 4.7-2 2.4 2 4.7 2M3 15c2.3 0 2.3-2 4.7-2s2.3 2 4.6 2 2.4-2 4.7-2 2.4 2 4.7 2"/></svg></span>
+            <span class="suggestion-text"><strong>Pantai & pulau</strong><small>Rehat dekat laut</small></span>
+            <svg class="suggestion-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+          <button class="suggestion-card" type="button" data-prompt="Bantu buat rencana liburan keluarga 3 hari di Indonesia yang ramah anak.">
+            <span class="suggestion-icon icon-family" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20Zm12.2 0v-1.3a4.2 4.2 0 0 1 4.2-4.2"/></svg></span>
+            <span class="suggestion-text"><strong>Liburan keluarga</strong><small>Seru untuk semua</small></span>
+            <svg class="suggestion-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+          <button class="suggestion-card" type="button" data-prompt="Apa saja destinasi kuliner khas Nusantara yang layak dijelajahi? Beri rekomendasi kotanya.">
+            <span class="suggestion-icon icon-food" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3v7a3 3 0 0 0 6 0V3M7 3v18M17 3v18m0-18c-2 2-3 5-3 8h6c0-3-1-6-3-8Z"/></svg></span>
+            <span class="suggestion-text"><strong>Wisata kuliner</strong><small>Jelajah lewat rasa</small></span>
+            <svg class="suggestion-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+          <button class="suggestion-card" type="button" data-prompt="Carikan hidden gem alam di Indonesia yang belum terlalu ramai dikunjungi.">
+            <span class="suggestion-icon icon-leaf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.5 3.5C11 3 5 6.7 5 13a5 5 0 0 0 5 5c6.3 0 10-6 10.5-14.5ZM3 21c3-5 7-8 12-11"/></svg></span>
+            <span class="suggestion-text"><strong>Hidden gem</strong><small>Jalur yang berbeda</small></span>
+            <svg class="suggestion-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="loading-message" id="loading" role="status" aria-live="polite" hidden>
+          <span class="tavi-avatar"><svg viewBox="0 0 220 180" aria-hidden="true"><use href="#tavi-mark"></use></svg></span>
+          <div class="loading-bubble"><span>Tavi sedang meracik rekomendasi</span><span class="typing-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        </div>
+        <div class="error-message" id="error-message" role="alert" hidden></div>
+      </section>
+
+      <footer class="composer-dock">
+        <form class="composer-form" id="chat-form">
+          <label class="visually-hidden" for="pesan">Tulis pesan untuk Tavi</label>
+          <input type="text" id="pesan" name="pesan" placeholder="Tulis pesan untuk Tavi..." autocomplete="off" required>
+          <button class="send-button" id="send-button" type="submit" aria-label="Kirim pesan" title="Kirim pesan">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 10.8 13.2M21 3l-6.5 18-3.7-7.8L3 9.5 21 3Z"/></svg>
+          </button>
+        </form>
+        <p class="composer-note">Setiap perjalanan dimulai dari satu cerita.</p>
+      </footer>
+    </main>
+  </div>
+  <script src="chat.js" defer></script>
+</body>
+</html>
